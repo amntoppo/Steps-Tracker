@@ -45,4 +45,7 @@ interface StepsDAO {
 
     @Query("SELECT SUM(distance) FROM Steps")
     fun getTotalDistance(): LiveData<Int>
+
+    @Query("SELECT SUM(timeInMillis) FROM Steps")
+    fun getTotalTimeInMillis(): LiveData<Long>
 }
